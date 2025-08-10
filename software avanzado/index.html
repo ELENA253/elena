@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Header ELENA - Música para Ella</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #f8e1f4, #e0f7fa);
+      color: #333;
+    }
+
+    header {
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #ff69b4;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s;
+    }
+
+    nav a i {
+      color: #ff69b4;
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff69b4;
+    }
+
+    nav a:hover i {
+      transform: rotate(15deg);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #ff69b4;
+      margin: 4px 0;
+      transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 85px;
+        left: 1rem;
+        right: 1rem;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      nav.show {
+        max-height: 300px;
+        padding: 1rem 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ELENA</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
+      <a href="#albums"><i class='bx bx-album'></i>Álbumes</a>
+      <a href="#songs"><i class='bx bx-music'></i>Canciones</a>
+      <a href="#blogs"><i class='bx bx-news'></i>Blogs</a>
+      <a href="#contact"><i class='bx bx-envelope'></i>Contacto</a>
+    </nav>
+  </header>
+
+<!-- 🌸 INICIO -->
+<section id="inicio" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #ffe0ec, #e0f7fa); padding: 2rem;">
+  <div style="max-width: 1200px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
+    
+    <!-- Imagen destacada -->
+    <!-- Imagen destacada -->
+<div style="flex: 1; min-width: 280px;">
+  <img src="assest/Captura_de_pantalla_2025-06-13_221007-removebg-preview.png"
+       alt="Chica escuchando música"
+       style="width: 100%; max-width: 1000px; border-radius: 20px;" />
+</div>
+
+    <!-- Texto de bienvenida -->
+    <div style="flex: 1; min-width: 280px; text-align: center;">
+      <h1 style="font-family: 'Pacifico', cursive; font-size: 3rem; color: #ff69b4;">Bienvenidos a ELENA</h1>
+      <p style="font-size: 1.2rem; margin: 1rem 0; color: #444;">
+        La música es el idioma del alma 🎵<br> Explora canciones, siente el ritmo y descubre tu estilo.
+      </p>
+      <a href="#songs" style="display: inline-block; margin-top: 1rem; background: #ff69b4; color: #fff; padding: 0.8rem 2rem; border-radius: 30px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: background 0.3s;">
+        Escucha Ahora
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- 🎶 ÁLBUMES -->
+<section id="albums" style="padding: 4rem 2rem; background: #fff;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ff69b4; margin-bottom: 1rem;">Mis Álbumes</h2>
+    <p style="color: #666; font-size: 1rem; margin-bottom: 3rem;">Descubre los sonidos que me definen ✨</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      
+      <!-- Álbum 1 -->
+      <div style="background: #ffe6f2; padding: 1.5rem; border-radius: 20px; width: 260px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="assest/Captura de pantalla 2025-06-13 222615.png" alt="Álbum 1" style="width: 100%; border-radius: 15px; margin-bottom: 1rem;">
+        <h3 style="color: #d63384;">¿Que tu te crees?</h3>
+        <p style="color: #555; font-size: 0.9rem;">Un viaje suave entre melodías emocionales y ritmos dulces.</p>
+      </div>
+
+      <!-- Álbum 2 -->
+      <div style="background: #e6f0ff; padding: 1.5rem; border-radius: 20px; width: 260px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://i.imgur.com/W1FurIJ.png" alt="Álbum 2" style="width: 100%; border-radius: 15px; margin-bottom: 1rem;">
+        <h3 style="color: #3366cc;">Cielo Azul</h3>
+        <p style="color: #555; font-size: 0.9rem;">Inspirado en tardes brillantes y pensamientos que vuelan.</p>
+      </div>
+
+      <!-- Álbum 3 -->
+      <div style="background: #e6ffe6; padding: 1.5rem; border-radius: 20px; width: 260px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://i.imgur.com/tKxrUbN.png" alt="Álbum 3" style="width: 100%; border-radius: 15px; margin-bottom: 1rem;">
+        <h3 style="color: #2ecc71;">Naturaleza Viva</h3>
+        <p style="color: #555; font-size: 0.9rem;">Conexión con lo natural, lo real y lo que vibra desde dentro.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 🎧 Sección de Reproductor con Slider Elegante -->
+<section style="background: linear-gradient(135deg, #fce4ec, #e0f7fa); padding: 4rem 2rem; font-family: 'Poppins', sans-serif;">
+  <div style="max-width: 1100px; margin: auto; text-align: center;">
+
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ff69b4; margin-bottom: 2rem;">Canciones</h2>
+
+    <!-- Slider de Canciones -->
+    <div class="carousel-container">
+      <div class="carousel-track" id="track">
+        <div class="carousel-slide" onclick="setSong(0)">
+          <img src="assest/Captura de pantalla 2025-06-13 222615.png" alt="¿Que tu te crees?">
+        </div>
+        <div class="carousel-slide" onclick="setSong(1)">
+          <img src="d:\software avanzado\assest\canciones\Captura de pantalla 2025-08-09 210638.png" alt="Hasta cuando no estas">
+        </div>
+        <div class="carousel-slide" onclick="setSong(2)">
+          <img src="d:\software avanzado\assest\canciones\Captura de pantalla 2025-08-09 210556.png" alt="Quedate conmigo esta navidad">
+        </div>
+         <div class="carousel-slide" onclick="setSong(3)">
+          <img src="d:\software avanzado\assest\canciones\Captura de pantalla 2025-08-09 211439.png" alt="RARA">
+        </div>
+         <div class="carousel-slide" onclick="setSong(4)">
+          <img src="d:\software avanzado\assest\canciones\Captura de pantalla 2025-08-09 204751.png" alt="Eres tu">
+        </div>
+          <div class="carousel-slide" onclick="setSong(5)">
+          <img src="d:\software avanzado\assest\canciones\Captura de pantalla 2025-08-09 204715.png" alt="Mil idiomas">
+        </div>
+      </div>
+    </div>
+
+    <!-- Reproductor -->
+    <div class="player">
+      <img id="cover" src="assest/Captura de pantalla 2025-06-13 222615.png" alt="Cover">
+      <div class="info">
+        <h3 id="title">Latidos de Luna</h3>
+        <p id="artist">Elena</p>
+        <audio id="audio" controls>
+          <source src="latidos-audio.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Estilos Slider + Player -->
+<style>
+  .carousel-container {
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .carousel-track {
+    display: flex;
+    animation: scroll 12s infinite linear;
+  }
+  .carousel-slide {
+    flex: 0 0 auto;
+    width: 250px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .carousel-slide img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .carousel-slide:hover {
+    transform: scale(1.05);
+  }
+
+  @keyframes scroll {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-270px); }
+    66%  { transform: translateX(-540px); }
+    100% { transform: translateX(0); }
+  }
+
+  .player {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .player img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  .player .info {
+    text-align: left;
+    max-width: 400px;
+  }
+  .player .info h3 {
+    margin: 0;
+    color: #ec407a;
+    font-size: 1.8rem;
+  }
+  .player .info p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+  }
+  .player audio {
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+  }
+</style>
+
+<!-- Script de Cambio de Canción -->
+<script>
+  const songs = [
+    {
+      title: "Latidos de Luna",
+      artist: "Elena",
+      audio: "latidos-audio.mp3",
+      cover: "assest/Captura de pantalla 2025-06-13 222615.png"
+    },
+    {
+      title: "Noche de Estrellas",
+      artist: "Elena",
+      audio: "noche-audio.mp3",
+      cover: "assest/Captura de pantalla 2025-06-13 222615.png"
+    },
+    {
+      title: "Colores del Alma",
+      artist: "Elena",
+      audio: "colores-audio.mp3",
+      cover: "assest/Captura de pantalla 2025-06-13 222615.png"
+    }
+  ];
+
+  function setSong(index) {
+    const audio = document.getElementById('audio');
+    const title = document.getElementById('title');
+    const artist = document.getElementById('artist');
+    const cover = document.getElementById('cover');
+
+    audio.src = songs[index].audio;
+    title.textContent = songs[index].title;
+    artist.textContent = songs[index].artist;
+    cover.src = songs[index].cover;
+    audio.play();
+  }
+</script>
+
+
+
+
+
+
+
+<!-- 📖 BLOG -->
+<section id="blog" style="padding: 4rem 2rem; background: linear-gradient(135deg, #e1f5fe, #f3e5f5);">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ba68c8;">Mi Blog</h2>
+    <p style="color: #555; font-size: 1rem; margin-bottom: 3rem;">Pensamientos, letras y melodías que quiero compartir contigo ✨</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      
+      <!-- Post 1 -->
+      <div style="background: #fff; border-radius: 20px; padding: 1.5rem; width: 300px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://i.imgur.com/4xV3eNZ.jpg" alt="Blog 1" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+        <h3 style="color: #ab47bc;">Cómo nace una canción</h3>
+        <p style="font-size: 0.9rem; color: #666;">A veces una nota en el corazón es todo lo que necesito para comenzar. Aquí te cuento mi proceso creativo.</p>
+        <a href="#" style="color: #ab47bc; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem;">Leer más →</a>
+      </div>
+
+      <!-- Post 2 -->
+      <div style="background: #fff; border-radius: 20px; padding: 1.5rem; width: 300px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://i.imgur.com/FGtuGmh.jpg" alt="Blog 2" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+        <h3 style="color: #4db6ac;">Mi top 5 de canciones favoritas</h3>
+        <p style="font-size: 0.9rem; color: #666;">Estas canciones me hacen sentir libre, me inspiran, me acompañan. ¿Coincidimos en alguna?</p>
+        <a href="#" style="color: #4db6ac; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem;">Leer más →</a>
+      </div>
+
+      <!-- Post 3 -->
+      <div style="background: #fff; border-radius: 20px; padding: 1.5rem; width: 300px; box-shadow: 0 6px 15px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://i.imgur.com/gzNZS3b.jpg" alt="Blog 3" style="width: 100%; border-radius: 12px; margin-bottom: 1rem;">
+        <h3 style="color: #f06292;">Una noche con mi guitarra</h3>
+        <p style="font-size: 0.9rem; color: #666;">Te cuento una historia mágica entre cuerdas, estrellas y pensamientos que se convirtieron en música.</p>
+        <a href="#" style="color: #f06292; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 1rem;">Leer más →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- 📬 CONTACTO -->
+<section id="contacto" style="padding: 4rem 2rem; background: linear-gradient(135deg, #f3e5f5, #e1f5fe);">
+  <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ff69b4;">Contáctame</h2>
+    <p style="color: #555; font-size: 1rem; margin-bottom: 2rem;">¿Tienes algo bonito que decirme o quieres colaborar? 💖</p>
+
+    <form style="background: #fff; border-radius: 20px; padding: 2rem; box-shadow: 0 6px 20px rgba(0,0,0,0.05); text-align: left;">
+      <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+        <input type="text" placeholder="Tu nombre" required
+          style="padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem;">
+
+        <input type="email" placeholder="Tu correo" required
+          style="padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem;">
+
+        <textarea rows="5" placeholder="Tu mensaje..."
+          style="padding: 1rem; border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; resize: vertical;"></textarea>
+
+        <button type="submit"
+          style="background: #ff69b4; color: white; padding: 0.8rem 2rem; border: none; border-radius: 34px; font-size: 1rem; cursor: pointer; transition: background 0.3s;">
+          Enviar Mensaje 
+        </button>
+
+      </div>
+    </form>
+
+   
+  </div>
+</section>
+
+<!-- Boxicons CDN (asegúrate de tenerlo en tu HTML) -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+<!-- 🌸 FOOTER HERMOSO -->
+<footer style="background: linear-gradient(135deg, #ffe0f0, #e0f7ff); padding: 3rem 1.5rem; font-family: 'Poppins', sans-serif; color: #444;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-direction: column; align-items: center; gap: 2rem; text-align: center;">
+
+    <!-- LOGO -->
+    <h2 style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #ec407a; margin: 0;">ELENA</h2>
+
+    <!-- EMAIL -->
+    <p style="margin: 0; font-size: 1rem; color: #555;">📧 <a href="mailto:elenamusica@correo.com" style="color: #ec407a; text-decoration: none; font-weight: 500;">elenamusica@correo.com</a></p>
+
+    <!-- ENLACES LEGALES -->
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+      <a href="#" style="color: #666; font-size: 0.95rem; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ec407a'" onmouseout="this.style.color='#666'">Política de Privacidad</a>
+      <a href="#" style="color: #666; font-size: 0.95rem; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#ec407a'" onmouseout="this.style.color='#666'">Términos y Condiciones</a>
+    </div>
+
+    <!-- REDES SOCIALES -->
+    <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+      <a href="https://www.tiktok.com/@elenita_pr7?is_from_webapp=1&sender_device=pc" style="color: #ec407a; font-size: 1.6rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.instagram.com/elenapr_oficial/" style="color: #000; font-size: 1.6rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class='bx bxl-tiktok'></i></a>
+      <a href="https://www.youtube.com/channel/UCMrmMCLEljJjQV8CHT3Pw1g" style="color: #f44336; font-size: 1.6rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"><i class='bx bxl-youtube'></i></a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <p style="font-size: 0.85rem; color: #999; margin-top: 2rem;">© 2025 <strong>ELENA</strong>. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- Boxicons (CDN) -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
+
